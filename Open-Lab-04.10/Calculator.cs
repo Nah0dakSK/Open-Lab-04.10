@@ -1,12 +1,19 @@
 ﻿using System;
+using System.Linq;
 
 namespace Open_Lab_04._10
 {
     public class Calculator
     {
-        public float Average(int[] nums)
+        public double Average(int[] nums)
         {
-            throw new NotImplementedException();
+            double sum = 0;
+            for (int i = 0; i < nums.Length; i++)
+            {
+                sum = sum + nums[i];
+            }
+            double result = sum / nums.Length;
+            return result;
         }
     }
 }
